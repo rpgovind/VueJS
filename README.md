@@ -9,3 +9,10 @@
 > v-pre <br/>
 > v-cloak - ng-cloak  <br/>
 > v-bind  eg:  v-bind:src , v-bind:alt can use :src  or :alt alternatively
+
+
+## two-way binding
+- v-model : for two way binding
+
+##event handling
+- v-on:click -  alternatively use @click
