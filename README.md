@@ -8,4 +8,4 @@
 > v-once  - one time binding <br/>
 > v-pre <br/>
 > v-cloak - ng-cloak  <br/>
-> v-bind  eg:  v-bind:src , v-bind:alt
+> v-bind  eg:  v-bind:src , v-bind:alt can use :src  or :alt alternatively

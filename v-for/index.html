@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Document</title>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+        crossorigin="anonymous">
+</head>
+
+<body>
+    <div id="app">
+        <h1>{{message}}</h1>
+        <ul>
+            <li v-for ="todo in todos">
+              {{todo.id}}  -    {{todo.text}}
+            </li>
+        </ul>
+    </div>
+    <script src="https://unpkg.com/vue/dist/vue.js"></script>
+    <script type="text/javascript">
+        var app = new Vue({
+            el : '#app',
+            data : {
+                message : 'v-For Sample',
+                todos : [
+                    {text : 'Learn new Front-end' , id :10},
+                    {text : 'Review current todos' , id :11},
+                    {text : 'Do shopping ', id: 12}
+                ]
+            }
+        });
+    </script>
+</body>
+
+</html>
