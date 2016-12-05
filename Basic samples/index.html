@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="app">
+        <br/>
+        <div v-text="message"></div>
+        <input type="text" v-model="message">
+        <input type="checkbox" v-model="pass">
+        <br/>
+        <input type="radio" v-model="count" value="4">
+        <input type="radio" v-model="count" value="3">
+        <select name="customer" id="customer" v-model="customers">
+            <option v-for="customer in customers" v-bind:value="customer.customerid">{{customer.name}}</option>
+        </select>
+        <ol>
+            <li v-for="customer in customers">
+                {{customer.customerid}} - {{customer.name | capitalize}} - {{customer.age}}
+            </li>
+        </ol>
+    </div>
+    <script src="https://unpkg.com/vue/dist/vue.js"></script>
+    <script type="text/javascript">
+    var myData = {message : 'Hello World'}
+        var app = new Vue({
+            el: '#app',
+            data: {
+                customers:[
+                    {name : 'Ramesh' , age : 37, customerid:100},
+                     {name : 'Linta' , age : 31, customerid:200},
+                      {name : 'Ishan' , age : 3, customerid:300}
+                ],
+                message: 'Hello <br> Welcoome Vue!',
+                pass : true,
+                count :4
+            },
+            created: function(){
+
+            },
+            ready : function() {
+                this.message = 'ready';
+                console.log('life cycle function');
+            }
+        })
+    </script>
+</body>
+
+</html>
